@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="sh.tablet.bgclipboard">
+    package="entr0pia.xposed.whiteclip">
 
     <application
         android:allowBackup="true"
@@ -11,16 +11,17 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        tools:targetApi="31">
+        tools:targetApi="34">
+
         <meta-data
-            android:name="xposedmodule"
-            android:value="true" />
+            android:name="xposedscope"
+            android:resource="@array/module_scope" />
         <meta-data
             android:name="xposeddescription"
-            android:value="An example which changes the color of clock text in status bar" />
+            android:value="@string/xposed_desc" />
         <meta-data
             android:name="xposedminversion"
-            android:value="53" />
+            android:value="93" />
     </application>
 
 

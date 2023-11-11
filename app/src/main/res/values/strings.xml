@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">BG clipboard</string>
+    <string name="app_name">KDE Connect clipboard</string>
+    <string name="xposed_desc">Allow KDE Connect read clipboard in background</string>
 </resources>

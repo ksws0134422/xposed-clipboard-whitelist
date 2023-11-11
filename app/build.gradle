@@ -3,25 +3,14 @@ plugins {
 }
 
 android {
-    signingConfigs {
-        debug {
-            keyPassword '1'
-        }
-        release {
-            storeFile file('C:\\Users\\Corinthe\\projs\\clipmod\\keys\\my-release-key.keystore')
-            storePassword '123456'
-            keyAlias 'tabs!'
-            keyPassword '123456'
-        }
-    }
-    compileSdk 32
+    compileSdk 34
 
     defaultConfig {
-        applicationId "sh.tablet.bgclipboard"
-        minSdk 30
-        targetSdk 32
-        versionCode 1
-        versionName "1.1"
+        applicationId "entr0pia.xposed.whiteclip"
+        minSdk 29
+        targetSdk 34
+        versionCode 3
+        versionName '1.2.1'
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         signingConfig signingConfigs.release
@@ -35,8 +24,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
     }
 }
 
