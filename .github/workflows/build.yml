@@ -1,0 +1,31 @@
+name: Build APK
+
+on:
+  push:
+    branches:
+      - main  # 或者你希望触发构建的其他分支
+  release:
+    types: [created]  # 当创建新版本时触发
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up JDK
+        uses: actions/setup-java@v2
+        with:
+          java-version: '11'  # 或者你项目所需的其他版本
+          distribution: 'adopt'
+
+      - name: Build with Gradle
+        run: ./gradlew assembleDebug  # 或者使用 assembleRelease 进行发布构建
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v2
+        with:
+          name: app-debug.apk
+          path: app/build/outputs/apk/debug/app-debug.apk  # 根据你的项目结构调整路径
