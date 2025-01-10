@@ -21,6 +21,9 @@ jobs:
           java-version: '11'  # 或者你项目所需的其他版本
           distribution: 'adopt'
 
+      - name: Grant execute permission for gradlew
+        run: chmod +x ./gradlew  # 添加此步骤以确保 gradlew 可执行
+
       - name: Build with Gradle
         run: ./gradlew assembleDebug  # 或者使用 assembleRelease 进行发布构建
 
